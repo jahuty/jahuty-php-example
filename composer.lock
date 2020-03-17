@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6558f74828bca9ebecac73d90cea4b1a",
+    "content-hash": "563d503dc2f347f6e2476e71b116d10a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -642,6 +642,52 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "jahuty/jahuty-php",
+            "version": "v3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jahuty/jahuty-php.git",
+                "reference": "15dee87c8cf3b132758c0c46a3ae388df5c5949d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jahuty/jahuty-php/zipball/15dee87c8cf3b132758c0c46a3ae388df5c5949d",
+                "reference": "15dee87c8cf3b132758c0c46a3ae388df5c5949d",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3",
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.1",
+                "roave/security-advisories": "dev-master",
+                "slevomat/coding-standard": "^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jahuty\\Jahuty\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jack Clayton",
+                    "email": "jack@jahuty.com"
+                }
+            ],
+            "description": "Jahuty's PHP SDK",
+            "keywords": [
+                "jahuty",
+                "php"
+            ],
+            "time": "2020-03-15T20:03:13+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
