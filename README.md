@@ -118,7 +118,7 @@ Replace the snippet `id` in `resources/views/examples/index.blade.php` with your
 
 ```php
 # resources/views/examples/index.blade.php
-<?php echo Snippet::get(YOUR_SNIPPET_ID); ?>
+<?php echo Snippet::render(YOUR_SNIPPET_ID); ?>
 ```
 
 Refresh the page, and you should see your snippet's content in the document!
