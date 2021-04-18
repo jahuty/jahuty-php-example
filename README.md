@@ -90,41 +90,27 @@ The example application is up and running!
 
 ## Running the example
 
-Now, it's time to run the default example.
+Now, it's time to view the examples.
 
 Navigate to `http://localhost:8000/examples`, and you should see the following:
 
 ![Jahuty example](https://github.com/jahuty/jahuty-php-example/blob/master/public/example.png)
 
-In this example, we're retrieving the "default" snippet (i.e., the snippet we control for system tests).
+## Customizing the examples
 
-If you inspect `resources/views/examples/index.blade.php`, you'll see we did two things:
+Our examples use snippets that we control. Of course, it's more fun if you use your own.
 
-1. We initialized our client with our (public) [API key](https://www.jahuty.com/docs/api#authentication) at the top of the file; and,
-1. We used the SDK to render the snippet with an `id` of `1`.
+If you haven't already, [sign up](https://app.jahuty.com/sign-up), and we'll provision your account with an organization, an API key, and a welcome snippet.
 
-## Customizing the example
+Then, to use your snippets in the examples:
 
-Ready to use your own snippet?
-
-If you haven't already, [sign up](https://www.jahuty.com/users/sign_up), and we'll provision your account with an organization, an API key, and a welcome snippet.
-
-Replace the API key in `resources/views/examples/index.blade.php` with the temporary API key we included in your welcome email:
-
-```php
-# resources/views/examples/index.blade.php
-$jahuty = new \Jahuty\Client('YOUR_API_KEY');
-```
-
-Replace the snippet `id` in the same file with your snippet's `id`. You can find a snippet's `id` beside its name:
-
-```php
-# resources/views/examples/index.blade.php
-<?php echo $jahuty->snippets->render(YOUR_SNIPPET_ID); ?>
-```
+1. _Change the API key._ Open `config/jahuty.php` and replace our API key with yours.
+1. _Change the snippet id._ Open `resources/views/examples/snippet.blade.php` and replace our snippet id with yours.
 
 Refresh the page, and you should see your snippet's content in the document!
 
+## That's it!
+
 If you have questions, try [our documentation](https://docs.jahuty.com) or feel free too [ask us a question](https://www.jahuty.com/contact).
 
-We hope you enjoy using [Jahuty](https://www.jahuty.com) to insert managed content anywhere, and we're excited to partner with you!
+We hope you enjoy using [Jahuty](https://www.jahuty.com) to save your team tons of time, and we're excited to partner with you!
