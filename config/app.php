@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+         App\Providers\JahutyProvider::class,
 
         /*
          * Application Service Providers...
