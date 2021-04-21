@@ -6,7 +6,7 @@ An example Laravel application with [Jahuty's PHP SDK](https://docs.jahuty.com/s
 
 Before you get started, let's make sure you have the correct version of PHP and Composer.
 
-Verify you have PHP 7.2+ or 8.0+ installed:
+Verify you have PHP 7.4 or 8.0+ installed:
 
 ```bash
 $ php -v
@@ -15,7 +15,7 @@ $ php -v
 The command above should produce the following output (or a higher version):
 
 ```bash
-PHP 7.2.5...
+PHP 8.0.3
 ```
 
 Verify you have Composer [installed globally or locally](https://getcomposer.org/doc/00-intro.md).
@@ -79,7 +79,7 @@ This should produce output similar to the following (the date, time, and PHP ver
 ```bash
 ~/jahuty-php-example $ php artisan serve
 Laravel development server started: http://127.0.0.1:8000
-[Sun Jul 22 22:11:45 2020] PHP 7.2.5 Development Server (http://127.0.0.1:8000) started
+[Sun Jul 22 22:11:45 2020] PHP 8.0.3 Development Server (http://127.0.0.1:8000) started
 ```
 
 Navigate to `http://localhost:8000`, and you should see the Laravel welcome screen:
