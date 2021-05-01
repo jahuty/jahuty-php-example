@@ -15,12 +15,14 @@
     ]);
 
     echo $jahuty->snippets->render(1);
-    
+
     echo $jahuty->snippets->render(62, [
         'params' => [
             'foo' => 'foo',
             'bar' => 'bar'
         ]
     ]);
+
+    echo $jahuty->snippets->render(102);
 ?>
 @stop

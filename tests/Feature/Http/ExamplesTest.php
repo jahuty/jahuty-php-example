@@ -55,6 +55,20 @@ class ExamplesTest extends TestCase
         $response->assertSee('This foo is bar');
     }
 
+    public function testSnippetWithLatestHasOkStatus()
+    {
+        $response = $this->get('/examples/snippet-with-latest');
+
+        $response->assertOk();
+    }
+
+    public function testSnippetWithLatestHasContent()
+    {
+        $response = $this->get('/examples/snippet-with-latest');
+
+        $response->assertSee('This content is latest');
+    }
+
     public function testSnippetsHasOkStatus()
     {
         $response = $this->get('/examples/snippets');
@@ -83,6 +97,7 @@ class ExamplesTest extends TestCase
 
         $response->assertSee('This is my first snippet');
         $response->assertSee('This is ');
+        $response->assertSee('This content is published');
     }
 
     public function testSnippetsWithParamsHasOkStatus()
@@ -98,5 +113,22 @@ class ExamplesTest extends TestCase
 
         $response->assertSee('This is my first snippet');
         $response->assertSee('This foo is bar');
+        $response->assertSee('This content is published');
+    }
+
+    public function testSnippetsWithLatestHasOkStatus()
+    {
+        $response = $this->get('/examples/snippets-with-latest');
+
+        $response->assertOk();
+    }
+
+    public function testSnippetsWithLatestHasContent()
+    {
+        $response = $this->get('/examples/snippets-with-latest');
+
+        $response->assertSee('This is my first snippet');
+        $response->assertSee('This is ');
+        $response->assertSee('This content is latest');
     }
 }
