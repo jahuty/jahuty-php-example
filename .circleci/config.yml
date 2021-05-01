@@ -11,6 +11,11 @@ jobs:
 
       - run: sudo apt update
       - run: sudo docker-php-ext-install zip sockets
+      
+      - run:
+          name: "Create Environment file"
+          command: |
+            mv .env.example .env
 
       # Download and cache dependencies.
       - restore_cache:
@@ -26,6 +31,10 @@ jobs:
           paths:
             - ./vendor
 
+      - run:
+          name: "Generate App key"
+          command: php artisan key:generate
+
       # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
@@ -37,6 +46,11 @@ jobs:
 
       - run: sudo apt update
       - run: sudo docker-php-ext-install zip sockets
+      
+      - run:
+          name: "Create Environment file"
+          command: |
+            mv .env.example .env
 
       # Download and cache dependencies.
       - restore_cache:
@@ -51,7 +65,11 @@ jobs:
           key: v74-dependencies-{{ checksum "composer.json" }}
           paths:
             - ./vendor
-
+           
+      - run:
+          name: "Generate App key"
+          command: php artisan key:generate
+         
       # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
@@ -63,6 +81,11 @@ jobs:
 
       - run: sudo apt update
       - run: sudo docker-php-ext-install zip sockets
+      
+      - run:
+          name: "Create Environment file"
+          command: |
+            mv .env.example .env
 
       # Download and cache dependencies.
       - restore_cache:
@@ -78,6 +101,10 @@ jobs:
           paths:
             - ./vendor
 
+      - run:
+          name: "Generate App key"
+          command: php artisan key:generate
+          
       # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
