@@ -26,7 +26,7 @@ jobs:
           paths:
             - ./vendor
 
-      - run: ./vendor/bin/phpcs .
+      # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
   test-php74:
@@ -52,7 +52,7 @@ jobs:
           paths:
             - ./vendor
 
-      - run: ./vendor/bin/phpcs .
+      # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
   test-php80:
@@ -78,7 +78,7 @@ jobs:
           paths:
             - ./vendor
 
-      - run: ./vendor/bin/phpcs .
+      # - run: ./vendor/bin/phpcs .
       - run: ./vendor/bin/phpunit
 
 workflows:
