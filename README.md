@@ -64,9 +64,33 @@ If you've installed Composer locally in your project:
 
 This will print a bunch of output to your screen as Composer installs the application's dependencies.
 
-When it's done (and it may take a few minutes), you're ready to start the application!
+When it's done (and it may take a few minutes), you're ready to test the application.
+
+## Testing the application
+
+Let's make sure the application installed correctly by running tests:
+
+```
+~/jahuty-php-example $ php ./vendor/bin/phpunit
+```
+
+This should print output similar to the following:
+
+```bash
+PHPUnit 8.5.15 by Sebastian Bergmann and contributors.
+
+...............                                                   15 / 15 (100%)
+
+Time: 5.25 seconds, Memory: 20.00 MB
+
+OK (15 tests, 18 assertions)
+```
+
+If not, you should fix your installation before proceeding.
 
 ## Starting the application
+
+Now that we've installed the application and tested it, we're ready to start it.
 
 PHP and Laravel include a development server, and we'll use it to serve our application from your local machine.
 
@@ -94,7 +118,7 @@ The example application is up and running!
 
 Now, it's time to view the examples.
 
-Navigate to `http://localhost:8000/examples`, and you should see the following:
+Navigate to `http://localhost:8000/examples`, and you should see something similar to the following:
 
 ![Jahuty example](https://github.com/jahuty/jahuty-php-example/blob/master/public/example.png)
 
