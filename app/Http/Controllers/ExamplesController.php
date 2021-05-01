@@ -26,6 +26,11 @@ class ExamplesController extends Controller
         return view('examples/snippet-from-cache');
     }
 
+    public function snippetWithLatest(Request $request)
+    {
+        return view('examples/snippet-with-latest');
+    }
+
     public function snippets(Request $request)
     {
         return view('examples/snippets');
@@ -39,5 +44,10 @@ class ExamplesController extends Controller
     public function snippetsFromCache(Request $request)
     {
         return view('examples/snippets-from-cache');
+    }
+
+    public function snippetsWithLatest(Request $request)
+    {
+        return view('examples/snippets-with-latest');
     }
 }

@@ -18,6 +18,9 @@
         <a href="<?php echo route('examples.snippet-with-params'); ?>">Rendering a snippet with parameters</a>
     </li>
     <li>
+        <a href="<?php echo route('examples.snippet-with-latest'); ?>">Rendering a snippet with the latest content</a>
+    </li>
+    <li>
         <a href="<?php echo route('examples.snippets'); ?>">Rendering a collection of snippets</a>
     </li>
     <li>
@@ -25,6 +28,9 @@
     </li>
     <li>
         <a href="<?php echo route('examples.snippets-with-params'); ?>">Rendering a collection of snippets with params</a>
+    </li>
+    <li>
+        <a href="<?php echo route('examples.snippets-with-latest'); ?>">Rendering a collection of snippets with the latest content</a>
     </li>
 </ul>
 <p>
@@ -35,10 +41,10 @@
     The "system test" <a href="https://docs.jahuty.com/components/organizations" target="_blank">organization</a> exists in Jahuty with an <a href="https://docs.jahuty.com/components/api-keys" target="_blank">API key</a>.
   </li>
   <li>
-    The organization has two <a href="https://docs.jahuty.com/components/snippets" target="_blank">snippets</a>, <code>1</code>, a static phrase, and <code>62</code>, a phrase with two <a href="https://docs.jahuty.com/liquid/introduction" target="_blank">variables</a>: <code>foo</code> and <code>bar</code>.
+    The organization has three <a href="https://docs.jahuty.com/components/snippets" target="_blank">snippets</a>: <code>1</code>, a static phrase; <code>62</code>, a phrase with two <a href="https://docs.jahuty.com/liquid/introduction" target="_blank">variables</a>, <code>foo</code> and <code>bar</code>; and, <code>102</code>, a snippet with staged changes.
   </li>
   <li>
-    The organiation has a <a href="https://docs.jahuty.com/components/tags" target="_blank">tag</a>, <code>test</code>, which has been applied to both snippets.
+    The organiation has a <a href="https://docs.jahuty.com/components/tags" target="_blank">tag</a>, <code>test</code>, which has been applied to all three snippets.
   </li>
 </ul>
 <p>
@@ -46,7 +52,7 @@
 </p>
 <ol>
     <li>
-        We added our API key to <code>config/jahuty.php</code>.
+        We added our API key to <code>config/jahuty.php</code> (normally, you would use an <a href="https://laravel.com/docs/7.x/configuration" target="_blank">environment variable</a>).
     </li>
     <li>
         We created a service provider, <code>JahutyProvider</code>, to register our service and to share the service instance, <code>$jahuty</code>, with all views.

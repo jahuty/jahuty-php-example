@@ -38,6 +38,11 @@ Route::get(
 )->name('examples.snippet-from-cache');
 
 Route::get(
+    'examples/snippet-with-latest',
+    'ExamplesController@snippetWithLatest'
+)->name('examples.snippet-with-latest');
+
+Route::get(
     'examples/snippets',
     'ExamplesController@snippets'
 )->name('examples.snippets');
@@ -51,3 +56,8 @@ Route::get(
     'examples/snippets-from-cache',
     'ExamplesController@snippetsFromCache'
 )->name('examples.snippets-from-cache');
+
+Route::get(
+    'examples/snippets-with-latest',
+    'ExamplesController@snippetsWithLatest'
+)->name('examples.snippets-with-latest');
