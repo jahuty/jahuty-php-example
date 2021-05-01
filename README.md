@@ -1,5 +1,7 @@
 # jahuty-php-example
 
+[![CircleCI](https://circleci.com/gh/jahuty/jahuty-php-example.svg?style=svg)](https://circleci.com/gh/jahuty/jahuty-php-example)
+
 An example Laravel application with [Jahuty's PHP SDK](https://docs.jahuty.com/sdks/php).
 
 ## Checking your environment
